@@ -1,0 +1,29 @@
+1. Héritage
+
+L'héritage est un principe fondamental de la POO qui permet à une classe (sous-classe) de dériver d'une autre classe (super-classe). Cela favorise la réutilisation du code et la création de relations hiérarchiques entre les classes.
+
+Classe Abstraite Vehicule: Dans notre projet, Vehicule est une classe abstraite qui définit les attributs et comportements communs à tous les véhicules. Elle contient des propriétés telles que immatriculation, marque, modele, annee, kilometrage, et statut. En tant que classe abstraite, elle ne peut pas être instanciée directement.
+
+Classes Dérivées: Les classes Voiture et Camion étendent la classe Vehicule. Elles héritent de ses attributs et méthodes tout en fournissant des implémentations spécifiques pour la méthode abstraite calculerPrixLocation(). Cela permet de définir des comportements spécifiques pour chaque type de véhicule tout en maintenant une structure de code cohérente.
+
+2. Polymorphisme
+
+Le polymorphisme permet d'utiliser une méthode de manière interchangeable, en fonction de l'objet qui l'appelle. Cela se manifeste principalement dans deux formes : le polymorphisme de méthode et le polymorphisme d'inclusion.
+
+Méthodes Polymorphiques: Grâce à l'héritage, les méthodes définies dans la classe parent peuvent être redéfinies dans les classes enfants. Par exemple, la méthode louer() est définie dans l'interface Louable et est implémentée dans la classe Vehicule, ce qui permet aux sous-classes de l'utiliser ou de la redéfinir si nécessaire.
+
+Utilisation de l'instance: Lors de la location d'un véhicule, le code peut traiter un objet de type Vehicule de manière polymorphe, qu'il soit de type Voiture ou Camion. Cela simplifie le code et le rend plus flexible.
+
+3. Encapsulation
+
+L'encapsulation est le principe qui consiste à restreindre l'accès direct à certains composants d'un objet, en masquant les détails d'implémentation et en n'exposant que ce qui est nécessaire.
+
+Visibilité des Attributs: Dans notre projet, les attributs des classes sont généralement définis comme private ou protected pour empêcher un accès direct. Cela garantit que les données de l'objet ne peuvent être modifiées que par le biais de méthodes publiques.
+
+Méthodes de Gestion: Des méthodes sont fournies pour manipuler les données des objets. Par exemple, la classe Client a des méthodes pour ajouter ou retirer des locations, ce qui permet de contrôler comment les données sont modifiées et d'assurer l'intégrité des objets.
+
+4. Gestion des Exceptions
+
+La gestion des exceptions est essentielle pour gérer les erreurs et les situations exceptionnelles qui peuvent survenir au cours de l'exécution d'un programme. Dans notre projet :
+
+Exceptions Personnalisées: Deux exceptions personnalisées, VehiculeIndisponibleException et ClientNonAutoriseException, sont créées pour gérer des cas spécifiques. Cela permet de fournir des messages d'erreur clairs et de gérer des situations exceptionnelles de manière appropriée.
